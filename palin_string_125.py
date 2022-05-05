@@ -7,3 +7,5 @@ class Solution:
         return s1 == s1[::-1]
 
 print(Solution().isPalindrome("A man, a plan, a canal: Panama"))
+
+#check palin
