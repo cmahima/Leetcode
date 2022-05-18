@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "Leetcode_progs"
+version = "0.1.0"
+description = "Leetcode"
+authors = ["Mahima Chaudhary"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+pandas = "^1.4.1"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^2.18.1"
+black = "^22.3.0"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+mypy = "^0.942"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 79
+lines_after_imports = 2
+
+[tool.black]
+line-length = 79
+target-version = ['py310']
+include = '\.pyi?$'
+exclude = ''
+
+[tool.mypy]
+python_version = "3.10"
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_untyped_defs = true
+follow_imports = "silent"
+ignore_missing_imports = true
+no_implicit_reexport = true
+strict_optional = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
